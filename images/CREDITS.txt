@@ -1,0 +1,22 @@
+Photo credits - Petro Remodeling Inc website draft (style B1 / B2)
+All photos are free for commercial use under the stated license; attribution is not
+required but is given here. Files were cropped/resized/compressed for the web.
+
+hero-home.jpg
+  "New Home Construction in Elk Grove, California" - photo by D Goug on Pexels
+  https://www.pexels.com/photo/38210398/   (Pexels License)
+
+hero-remodeling.jpg, choice-remodeling.jpg
+  White kitchen with island - photo by Curtis Adams on Pexels
+  https://www.pexels.com/photo/36777549/   (Pexels License)
+
+hero-restoration.jpg, choice-restoration.jpg
+  "Room under construction with metal studs and drywall" - photo by Olek Buzunov on Unsplash
+  https://unsplash.com/photos/GIubG5JhDV4   (Unsplash License)
+
+Licenses:
+  Pexels License   https://www.pexels.com/license/
+  Unsplash License https://unsplash.com/license
+
+Logo files (pr-mark.svg, pr-mark-light.svg, ../favicon.svg) are the "PR" monogram taken
+from the owner's own Petro Remodeling vector logo (logo.pdf, Adobe Illustrator, 2019) - not stock.
