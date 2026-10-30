@@ -34,11 +34,12 @@
 </section>
 <section>
   <div class="container form-wrap">
-    <form class="estimate" action="https://formsubmit.co/petroremodels@gmail.com" method="POST">
-      <input type="hidden" name="_subject" value="New Estimate Request - petro-design.com">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_next" value="https://petro-design.com/thanks.html">
-      <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <form class="estimate" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="a0134f70-4635-494c-9b66-882a6c5de615">
+      <input type="hidden" name="subject" value="New Estimate Request - petro-design.com">
+      <input type="hidden" name="from_name" value="petro-design.com">
+      <input type="hidden" name="redirect" value="https://petro-design.com/thanks.html">
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
       <div class="row">
         <div class="field"><label for="name">Name</label><input type="text" id="name" name="name" autocomplete="name"></div>
         <div class="field"><label for="phone">Phone <span class="req">*</span></label><input type="tel" id="phone" name="phone" required autocomplete="tel"></div>
