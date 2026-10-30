@@ -247,3 +247,15 @@ input:focus,select:focus,textarea:focus{outline-color:rgba(229,40,63,.35)}
 .site-footer a:hover{color:#ff6b7a}
 .footer-bottom{border-top-color:#23272d}
 @media (max-width:1020px){.nav-links{background:#0d0f12;border-top:1px solid #23272d;box-shadow:0 10px 20px rgba(0,0,0,.4)}}
+
+/* reviews: google + yelp */
+.reviews{grid-template-columns:repeat(3,1fr);max-width:1180px}
+.rating-line{font-size:1.1rem}
+.rating-line .stars{color:#f5b301;letter-spacing:2px;font-size:1.2rem}
+.reviews-more{text-align:center;margin-top:28px}
+@media (max-width:1020px){.reviews{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){.reviews{grid-template-columns:1fr}}
+.reviews{display:flex;flex-wrap:wrap;justify-content:center;gap:22px}
+.reviews>.review{flex:0 1 calc((100% - 44px)/3)}
+@media (max-width:1020px){.reviews>.review{flex-basis:calc((100% - 22px)/2)}}
+@media (max-width:640px){.reviews>.review{flex-basis:100%}}
