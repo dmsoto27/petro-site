@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- DRAFT for David Mendoza's approval. Not published. Not linked from the menu (landing page for ads / search). -->
+<title>ADU &amp; Garage Conversion Builder in Lancaster, Palmdale &amp; Santa Clarita | Petro Remodeling Inc</title>
+<meta name="description" content="Detached ADUs, garage conversions and attached ADUs in the Antelope Valley and Santa Clarita. Petro Remodeling Inc is a licensed CA contractor (CSLB #1054586) based in Lancaster. We handle plans and permits. Request a free estimate.">
+<link rel="canonical" href="https://petro-design.com/adu.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+<style>
+/* page-specific additions; reuse site variables (same as remodeling.html) */
+.steps{counter-reset:step;list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+.steps li{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;position:relative}
+.steps li::before{counter-increment:step;content:counter(step);display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--orange);color:#fff;font-weight:800;margin-bottom:10px}
+.steps h3{margin:0 0 6px;font-size:1.05rem}
+.steps p{margin:0;color:var(--gray);font-size:.96rem}
+.note{max-width:820px;margin:32px auto 0;background:#fff;border:1px solid var(--line);border-left:5px solid var(--orange);border-radius:var(--radius);padding:18px 22px}
+.note p{margin:0}
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.faq{max-width:820px;margin:0 auto}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:0;margin-bottom:14px}
+.faq summary{cursor:pointer;font-weight:700;padding:18px 22px;list-style:none;position:relative;padding-right:48px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:22px;top:14px;font-size:1.5rem;color:var(--orange-d);font-weight:700}
+.faq details[open] summary::after{content:"\2013"}
+.faq details p{margin:0;padding:0 22px 18px;color:var(--gray)}
+.cta .cta-actions{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.cta .btn-outline{background:transparent;border:2px solid #fff}
+.cta .btn-outline:hover{background:rgba(255,255,255,.15)}
+/* ADU hero with short form */
+.adu-hero .hero-grid{grid-template-columns:1.15fr 1fr;align-items:start}
+.adu-hero form.estimate{padding:22px;color:#eceef0}
+.adu-hero form.estimate h2{margin:0 0 4px;font-size:1.25rem}
+.adu-hero form.estimate .form-sub{margin:0 0 12px;color:var(--gray);font-size:.95rem}
+.adu-hero form.estimate textarea{display:none}
+.trust-list{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:8px}
+.trust-list li{padding-left:30px;position:relative}
+.trust-list li::before{content:"";position:absolute;left:0;top:4px;width:18px;height:18px;border-radius:50%;background:var(--orange) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3'%3E%3Cpath d='M5 12l5 5 9-10'/%3E%3C/svg%3E") center/12px no-repeat}
+.trust-list a{color:#fff}
+.hero .rating-line{margin-top:18px;color:#dde4ea}
+.programs .card p{color:var(--gray)}
+.programs .card a.more{font-weight:700}
+.programs .card ul{margin:8px 0 12px;padding-left:20px;color:var(--gray)}
+.area-cols{display:grid;grid-template-columns:1fr 1fr;gap:36px}
+.area-cols h3{margin-top:0}
+.small{font-size:.9rem;color:var(--gray)}
+@media (max-width:1020px){.steps{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:900px){.adu-hero .hero-grid{grid-template-columns:1fr}.why,.area-cols{grid-template-columns:1fr}.steps{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:720px){.steps{grid-template-columns:1fr}}
+.price-grid{grid-template-columns:repeat(2,1fr)}
+.price-grid .price{font-family:'Oswald',sans-serif;font-size:1.5rem;font-weight:600;color:var(--navy);margin:0 0 2px}
+.price-grid .price-ex{margin:0 0 8px;color:var(--gray);font-size:.9rem;font-weight:600}
+.price-grid p{color:var(--gray)}
+@media (max-width:720px){.price-grid{grid-template-columns:1fr}}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.gallery figure{margin:0;background:#1b1e23;border:1px solid #2c3138;border-radius:var(--radius);overflow:hidden}
+.gallery img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+.gallery figcaption{padding:10px 14px;font-size:.92rem;color:var(--gray)}
+@media (max-width:900px){.gallery{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.gallery{grid-template-columns:1fr}}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "GeneralContractor",
+  "name": "Petro Remodeling Inc",
+  "url": "https://petro-design.com/",
+  "telephone": "+1-661-554-9217",
+  "email": "petroremodels@gmail.com",
+  "address": {"@type": "PostalAddress", "addressLocality": "Lancaster", "addressRegion": "CA", "addressCountry": "US"},
+  "areaServed": ["Lancaster, CA", "Palmdale, CA", "Quartz Hill, CA", "Rosamond, CA", "California City, CA", "Acton, CA", "Littlerock, CA", "Lake Los Angeles, CA", "Santa Clarita, CA", "Valencia, CA", "Saugus, CA", "Canyon Country, CA", "Newhall, CA", "Stevenson Ranch, CA", "Castaic, CA"],
+  "hasCredential": {"@type": "EducationalOccupationalCredential", "credentialCategory": "California Contractors State License Board license #1054586"},
+  "makesOffer": {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Accessory dwelling units (ADUs): detached ADUs, garage conversions, attached ADUs and junior ADUs, including plans and permits"}}
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <nav class="container nav" aria-label="Main">
+    <a class="brand" href="index.html"><img src="images/pr-mark-light.svg" alt="Petro Remodeling Inc logo" width="46" height="40"><span>Petro Remodeling Inc<small>Build &middot; Remodel &middot; Restore</small></span></a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="restoration.html">Restoration</a></li>
+      <li><a href="remodeling.html">Remodeling</a></li>
+      <li><a href="index.html#area">Service Area</a></li>
+      <li><a href="index.html#reviews">Reviews</a></li>
+      <li><a href="tel:+16615549217">(661) 554-9217</a></li>
+      <li><a class="btn btn-sm" href="contact.html">Free Estimate</a></li>
+    </ul>
+  </nav>
+</header>
+<!-- OPTIONAL (must-have #13, needs David + a translator): Spanish version toggle, e.g. <a href="adu-es.html" lang="es">Español</a> next to the phone link. Not built yet. -->
+<main id="main">
+
+<!-- Hero background is the same decorative image the home page uses (images/hero-home.jpg). It is NOT a Petro project photo and is not captioned as one. -->
+<section class="hero adu-hero" style="--hero-img:url('images/hero-home.jpg')">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">ADUs &middot; Antelope Valley &amp; Santa Clarita</span>
+      <h1>Antelope Valley ADU &amp; Garage Conversion Builder: We Handle Plans &amp; Permits.</h1>
+      <p class="lead">Detached ADUs, garage conversions and attached ADUs in Lancaster, Palmdale, the rest of the Antelope Valley and Santa Clarita. One licensed, local contractor from your free estimate through final inspection.</p>
+      <div class="hero-actions">
+        <a class="btn" href="tel:+16615549217">Call (661) 554-9217</a>
+        <a class="btn btn-outline" href="#estimate">Request a Free Estimate</a>
+      </div>
+      <ul class="trust-list">
+        <li>Licensed CA contractor &middot; <a href="https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/CheckLicense.aspx" target="_blank" rel="noopener">CSLB #1054586</a> (verify on the CSLB site)</li>
+        <li>Based in Lancaster, CA</li>
+        <li>We handle plans &amp; permits</li>
+        <!-- OPTIONAL if true (David to confirm): "[X] years in business" / "Insured" / "Bonded" / BBB or other badges -->
+      </ul>
+      <p class="rating-line"><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <strong>4.9 on Google</strong> from 13 reviews &middot; also reviewed on Yelp</p>
+    </div>
+    <form id="estimate" class="estimate" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="a0134f70-4635-494c-9b66-882a6c5de615">
+      <input type="hidden" name="subject" value="New ADU Estimate Request - petro-design.com/adu">
+      <input type="hidden" name="from_name" value="petro-design.com">
+      <input type="hidden" name="redirect" value="https://petro-design.com/thanks.html">
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
+      <h2>Get a free ADU estimate</h2>
+      <p class="form-sub">Takes about a minute. We&rsquo;ll call you back.</p>
+      <div class="row">
+        <div class="field"><label for="name">Name</label><input type="text" id="name" name="name" autocomplete="name"></div>
+        <div class="field"><label for="phone">Phone <span class="req">*</span></label><input type="tel" id="phone" name="phone" required autocomplete="tel"></div>
+      </div>
+      <div class="row">
+        <div class="field"><label for="email">Email</label><input type="email" id="email" name="email" autocomplete="email"></div>
+        <div class="field"><label for="address">City / ZIP</label><input type="text" id="address" name="address_city" autocomplete="postal-code"></div>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label for="project">Project Type</label>
+          <select id="project" name="project_type">
+            <option value="">Select a project type</option>
+            <option>Garage conversion ADU</option>
+            <option>Detached ADU</option>
+            <option>Attached ADU</option>
+            <option>Junior ADU (JADU)</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="timeline">Timeline</label>
+          <select id="timeline" name="timeline">
+            <option value="">Select a timeline</option>
+            <option>As soon as possible</option>
+            <option>In 1&ndash;3 months</option>
+            <option>In 3&ndash;6 months</option>
+            <option>6+ months / just researching</option>
+          </select>
+        </div>
+      </div>
+      <div class="consent">
+        <input type="checkbox" id="sms_consent" name="sms_consent" value="Yes - consented to SMS">
+        <label for="sms_consent">By checking this box, I consent to receive SMS from Petro Remodeling Inc about my appointments, estimates and project updates. Reply STOP to opt-out; Reply HELP for support; Message &amp; data rates may apply; Messaging frequency may vary. Visit <a href="https://petro-design.com/privacy.html">https://petro-design.com/privacy.html</a> to see our privacy policy and <a href="https://petro-design.com/terms.html">https://petro-design.com/terms.html</a> for our Terms of Service.</label>
+      </div>
+      <button type="submit" class="btn">Request My Free Estimate</button>
+      <p class="form-legal">SMS consent is optional and not required to request an estimate. See our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Service</a>.</p>
+    </form>
+  </div>
+</section>
+
+<section id="adu-types">
+  <div class="container">
+    <div class="section-head">
+      <h2>ADUs We Build</h2>
+      <p>Every ADU we build includes plans and permits.</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="card"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></div><h3>Detached ADUs</h3><p>A new, separate backyard home with its own entry, kitchen and bathroom, for family, guests or a renter.</p></div>
+      <div class="card"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10 12 4l9 6v10H3z"/><path d="M6 20v-7h12v7"/><path d="M6 16h12"/></svg></div><h3>Garage Conversions</h3><p>Turn an attached or detached garage into a legal, permitted living space using the structure you already have.</p></div>
+      <div class="card"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 20h20"/><path d="M4 20V9l8-6 8 6v11"/><path d="M12 20V9"/></svg></div><h3>Attached ADUs &amp; Guest Houses</h3><p>An addition that shares a wall with your home, or a junior ADU (JADU) created within your existing home.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="section-alt">
+  <div class="container">
+    <div class="section-head">
+      <h2>Recent ADU Projects</h2>
+      <p>Real photos from our own ADU jobs, from finished kitchens back to foundation and framing.</p>
+    </div>
+    <div class="gallery">
+      <figure><img src="images/adu/adu-finished-kitchen-island.jpg" alt="Finished ADU kitchen by Petro Remodeling with white shaker cabinets, a quartz island, and stainless steel appliances" width="1600" height="1200" loading="lazy" decoding="async"><figcaption>Finished kitchen with island</figcaption></figure>
+      <figure><img src="images/adu/adu-finished-kitchen-quartz-backsplash.jpg" alt="Finished ADU kitchen by Petro Remodeling with white cabinets, a quartz backsplash, gas cooktop, and wall oven" width="1600" height="1200" loading="lazy" decoding="async"><figcaption>Quartz backsplash and gas cooktop</figcaption></figure>
+      <figure><img src="images/adu/adu-finished-open-kitchen-living-beam.jpg" alt="Open kitchen and living area in a finished ADU by Petro Remodeling, with a wood ceiling beam and a large island" width="1600" height="1200" loading="lazy" decoding="async"><figcaption>Open kitchen and living area with wood beam</figcaption></figure>
+      <figure><img src="images/adu/adu-finished-shaker-kitchen-white-range.jpg" alt="Finished ADU kitchen by Petro Remodeling with white shaker cabinets, black hardware, and a white range" width="1600" height="1200" loading="lazy" decoding="async"><figcaption>White shaker kitchen</figcaption></figure>
+      <figure><img src="images/adu/adu-finished-living-area.jpg" alt="Living area of a finished ADU by Petro Remodeling with wood-look flooring and a ceiling fan" width="1600" height="1200" loading="lazy" decoding="async"><figcaption>Living area with wood-look floors</figcaption></figure>
+      <figure><img src="images/adu/adu-exterior-sheathing-front.jpg" alt="ADU under construction by Petro Remodeling: sheathed exterior with covered front porch" width="1600" height="1200" loading="lazy" decoding="async"><figcaption>Sheathed exterior with covered porch</figcaption></figure>
+      <figure><img src="images/adu/adu-aerial-roof-framing.jpg" alt="Aerial view of an ADU under construction by Petro Remodeling with the roof shingled" width="1440" height="801" loading="lazy" decoding="async"><figcaption>Shingled roof, windows going in</figcaption></figure>
+      <figure><img src="images/adu/adu-exterior-sheathing-side.jpg" alt="Side view of a sheathed ADU under construction by Petro Remodeling in the Antelope Valley" width="1440" height="1227" loading="lazy" decoding="async"><figcaption>Exterior sheathing</figcaption></figure>
+      <figure><img src="images/adu/adu-foundation-forms-rebar.jpg" alt="Foundation forms and rebar set for an ADU by Petro Remodeling" width="1280" height="960" loading="lazy" decoding="async"><figcaption>Foundation: forms and rebar</figcaption></figure>
+      <figure><img src="images/adu/adu-foundation-slab-poured.jpg" alt="Freshly poured concrete slab for an ADU by Petro Remodeling" width="1600" height="1200" loading="lazy" decoding="async"><figcaption>Foundation: slab poured</figcaption></figure>
+      <figure><img src="images/adu/adu-wall-framing.jpg" alt="Wall framing on an ADU built by Petro Remodeling" width="1440" height="1080" loading="lazy" decoding="async"><figcaption>Wall framing</figcaption></figure>
+      <figure><img src="images/adu/adu-roof-trusses-interior.jpg" alt="Roof trusses and framing inside an ADU under construction by Petro Remodeling" width="1280" height="960" loading="lazy" decoding="async"><figcaption>Roof trusses from inside</figcaption></figure>
+      <figure><img src="images/adu/adu-garage-interior-framing.jpg" alt="New interior wall framing inside an existing structure, by Petro Remodeling" width="1075" height="1120" loading="lazy" decoding="async"><figcaption>Interior framing</figcaption></figure>
+      <figure><img src="images/adu/adu-interior-drywall-minisplit.jpg" alt="Drywalled ADU interior with a ductless mini-split, by Petro Remodeling" width="1600" height="1200" loading="lazy" decoding="async"><figcaption>Drywall and mini-split installed</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="how-it-works">
+  <div class="container">
+    <div class="section-head">
+      <h2>How Your ADU Project Works</h2>
+      <p>One team from the first call to move-in day.</p>
+    </div>
+    <ol class="steps">
+      <li><h3>Free estimate</h3><p>Call or send the form. We talk through your property, what you want to build and your budget.</p></li>
+      <li><h3>Site visit &amp; feasibility</h3><p>We look at your lot, garage, utilities and access to confirm what can be built and how.</p></li>
+      <li><h3>Plans &amp; permits</h3><p>We handle the plans and submit them to your city or LA County for permits.</p></li>
+      <li><h3>We build</h3><p>We build your ADU as described in your written estimate and keep you updated along the way.</p></li>
+      <li><h3>Final inspection &amp; move-in</h3><p>The building inspector signs off, we walk through the finished ADU with you, and it&rsquo;s ready to use.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="programs" class="section-alt programs">
+  <div class="container">
+    <div class="section-head">
+      <h2>Pre-Approved ADU Plans &amp; Local Programs</h2>
+      <p>Cities and the County offer ready-made ADU plans that can save design time. We can build from these plans or from a custom design.</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="card">
+        <h3>City of Lancaster</h3>
+        <p>Pre-approved ADU plans designed by RRM Design Group, sold through the City&rsquo;s permit portal. Five designs, including:</p>
+        <ul><li>Poppy: 1 bed / 1 bath, 350 sq ft</li><li>Juniper: 1 bed / 1 bath, 602 sq ft</li><li>Goldenbrush: 2 bed / 2 bath, 799 sq ft</li><li>Primrose: 2 bed / 2 bath, 840 sq ft</li><li>Sunflower</li></ul>
+        <p>A project-specific site plan is still required.</p>
+        <a class="more" href="https://www.cityoflancasterca.org/our-city/departments-services/housing/pre-approved-adu-plans" target="_blank" rel="noopener">Lancaster pre-approved ADU plans &rarr;</a>
+      </div>
+      <div class="card">
+        <h3>Lancaster ADU Assistance Loan</h3>
+        <p>The City offers a deferred-payment, no-interest loan of up to $10,000 for ADU soft costs. It may be forgiven over five years if the program conditions are met, including owner-occupancy and renting the ADU to a low-income household. The application asks for a preliminary ADU cost estimate signed by a licensed contractor, which we can provide.</p>
+        <a class="more" href="https://www.cityoflancasterca.org/our-city/departments-services/housing/adu-assistance-loan-program" target="_blank" rel="noopener">Lancaster ADU Assistance Loan &rarr;</a>
+      </div>
+      <div class="card">
+        <h3>City of Palmdale</h3>
+        <p>Free standard ADU concept plans in Craftsman and Spanish styles:</p>
+        <ul><li>Plan 1: 608 sq ft</li><li>Plan 2: 749 sq ft</li><li>Plan 3: about 1,000&ndash;1,106 sq ft</li></ul>
+        <p>These are conceptual plans; construction drawings, structural calculations and Title 24 energy calculations are still needed. We handle that.</p>
+        <a class="more" href="https://www.cityofpalmdaleca.gov/1351/Standard-ADU-Plans" target="_blank" rel="noopener">Palmdale standard ADU plans &rarr;</a>
+      </div>
+      <div class="card">
+        <h3>LA County (unincorporated areas)</h3>
+        <p>For unincorporated communities such as Acton, Lake Los Angeles, Littlerock, Quartz Hill, Stevenson Ranch and Castaic, LA County Public Works offers free pre-approved ADU plans:</p>
+        <ul><li>Plan A: 1,200 sq ft, 3 bed / 1 bath</li><li>Plan B: 1,200 sq ft, 2 bed / 1 bath</li><li>Plan C: 800 sq ft, 1 bed / 1 bath</li></ul>
+        <p>A site-specific plot plan is still required.</p>
+        <a class="more" href="https://dpw.lacounty.gov/building-and-safety/adu/pre-approved" target="_blank" rel="noopener">LA County pre-approved ADU plans &rarr;</a>
+      </div>
+      <div class="card">
+        <h3>City of Santa Clarita</h3>
+        <p>Santa Clarita has its own ADU rules. Per the City&rsquo;s ADU handout, a new detached ADU can be up to 800 sq ft with 4-foot side and rear setbacks and a 16-foot height limit, junior ADUs can be up to 500 sq ft, and no parking is required.</p>
+        <a class="more" href="https://santaclarita.gov/planning/wp-content/uploads/sites/10/2026/03/FINAL-ADU-Handout.pdf" target="_blank" rel="noopener">Santa Clarita ADU handout (PDF) &rarr;</a>
+      </div>
+      <div class="card">
+        <h3>Not sure which applies to you?</h3>
+        <p>It depends on whether your home is inside a city or in unincorporated LA County or Kern County. Tell us your address when we talk and we&rsquo;ll sort out which rules and plans apply.</p>
+        <a class="more" href="#estimate">Request a free estimate &rarr;</a>
+      </div>
+    </div>
+    <div class="note"><p>Program details are summarized from each agency&rsquo;s website and can change. Check the linked pages for current terms.</p></div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="container">
+    <div class="section-head">
+      <h2>Typical ADU Price Ranges</h2>
+      <p>Typical Antelope Valley &amp; Santa Clarita market ranges, not a quote. Every lot is different. Get your free estimate for exact pricing.</p>
+    </div>
+    <div class="grid price-grid">
+      <div class="card"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10 12 4l9 6v10H3z"/><path d="M6 20v-7h12v7"/><path d="M6 16h12"/></svg></div><h3>Garage conversion</h3><p class="price">About $80k&ndash;$130k</p><p class="price-ex">Example: 400 sq ft</p><p>A basic conversion reusing the existing slab and walls often starts around $80k. Adding a kitchen, bathroom, sewer work and a new panel brings it to $120k+.</p></div>
+      <div class="card"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></div><h3>Detached ADU</h3><p class="price">About $190k&ndash;$280k</p><p class="price-ex">Example: 750 sq ft</p><p>Larger 900&ndash;1,200 sq ft units run up to about $350k.</p></div>
+      <div class="card"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 20h20"/><path d="M4 20V9l8-6 8 6v11"/><path d="M12 20V9"/></svg></div><h3>Attached ADU / guest house</h3><p class="price">Similar to detached</p><p>Often a little less, thanks to the shared wall and easier utility tie-ins.</p></div>
+      <div class="card"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5"/><path d="M9 13h7M9 17h7"/></svg></div><h3>Plans, engineering &amp; permits</h3><p class="price">About $10k&ndash;$30k</p></div>
+    </div>
+    <div class="note"><p>Utility work (such as an Edison service or panel upgrade, or sewer/water lines) varies by lot and can add cost. City impact fees are waived for ADUs under 750 sq ft, and school fees don&rsquo;t apply to ADUs under 500 sq ft.</p></div>
+    <p class="reviews-more"><a class="btn" href="#estimate">Get Your Free Estimate</a></p>
+  </div>
+</section>
+
+<section id="timeline" class="section-alt">
+  <div class="container">
+    <div class="section-head">
+      <h2>Typical ADU Timeline</h2>
+      <p>An ADU happens in two phases: design and permits, then construction.</p>
+    </div>
+    <div class="why">
+      <div class="card"><h3>1. Design &amp; plans</h3><p>Pre-approved or standard plans can shorten this phase. Custom designs take longer.</p><!-- OPTIONAL: David's typical design time, e.g. "[X]-[Y] weeks" --></div>
+      <div class="card"><h3>2. Permits</h3><p>Plan review times vary by city. For example, the City of Lancaster says a first plan review usually takes 2&ndash;3 weeks and each re-review 1&ndash;2 weeks.</p></div>
+      <div class="card"><h3>3. Construction</h3><p>Depends on the size and type of ADU. Garage conversions are usually faster than new detached builds. You get a schedule with your written estimate.</p><!-- OPTIONAL: David's typical construction time, e.g. "Garage conversions: [X] weeks; detached ADUs: [Y] months" --></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="container">
+    <div class="section-head">
+      <h2>What Our Clients Say</h2>
+      <p class="rating-line"><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <strong>4.9 on Google</strong> from 13 reviews &middot; also reviewed on Yelp</p>
+    </div>
+    <div class="reviews">
+      <blockquote class="review"><p>&ldquo;I&rsquo;m super happy with David &hellip; I give him all my projects. Such as ADUs and new projects. He&rsquo;s the most reliable guy.&rdquo;</p><cite>&mdash; Shawn J., Google</cite></blockquote>
+    </div>
+    <p class="reviews-more"><a href="https://maps.google.com/?cid=1548032809672535846" target="_blank" rel="noopener">Read our Google reviews &rarr;</a></p>
+  </div>
+</section>
+
+<section id="area" class="section-alt">
+  <div class="container">
+    <div class="section-head">
+      <h2>ADU Service Area</h2>
+      <p>Based in Lancaster, CA, serving the Antelope Valley &amp; Santa Clarita.</p>
+    </div>
+    <div class="area-cols">
+      <div>
+        <h3>Antelope Valley</h3>
+        <ul class="chips">
+          <li>Lancaster</li><li>Palmdale</li><li>Quartz Hill</li><li>Rosamond</li><li>California City</li><li>Acton</li><li>Littlerock</li><li>Lake Los Angeles</li>
+        </ul>
+        <!-- David to confirm the community list (Lake Los Angeles comes from the plan doc). Add others you serve, e.g. Leona Valley, Pearblossom. -->
+      </div>
+      <div>
+        <h3>Santa Clarita Valley</h3>
+        <ul class="chips">
+          <li>Santa Clarita</li><li>Valencia</li><li>Saugus</li><li>Canyon Country</li><li>Newhall</li><li>Stevenson Ranch</li><li>Castaic</li>
+        </ul>
+        <p class="small">Valencia, Saugus, Canyon Country and Newhall are in the City of Santa Clarita and follow the City&rsquo;s ADU rules. Stevenson Ranch and Castaic are unincorporated LA County. Rosamond and California City are in Kern County.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="section-head">
+      <h2>ADU FAQ</h2>
+      <p>Common questions from homeowners thinking about an ADU.</p>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary>Do I need a permit for an ADU or garage conversion?</summary>
+        <p>Yes. A legal ADU, including a garage conversion, needs a building permit. We handle the plans and permits for you. In the City of Lancaster, ADUs do not need Planning approval and go straight to permitting.</p>
+      </details>
+      <details>
+        <summary>How big can my ADU be?</summary>
+        <p>It depends on your lot and where you live. For example, Santa Clarita allows new detached ADUs up to 800 sq ft, Lancaster&rsquo;s pre-approved plans range from 350 to 840 sq ft, and LA County&rsquo;s pre-approved plans for unincorporated areas are 800 and 1,200 sq ft. Junior ADUs are limited to 500 sq ft. We&rsquo;ll confirm what fits on your property.</p>
+      </details>
+      <details>
+        <summary>Can I rent out my ADU?</summary>
+        <p>In most cases, yes. For example, Santa Clarita allows an ADU to be rented separately from the main home (not for less than 30 days), but not sold separately. If you use Lancaster&rsquo;s ADU Assistance Loan, the program requires renting the ADU to a low-income household. Rules vary by city, so we&rsquo;ll go over yours.</p>
+      </details>
+      <details>
+        <summary>What about utilities, sewer or septic?</summary>
+        <p>Water, sewer or septic, electrical and gas connections are part of every ADU plan. During the site visit we look at your existing utilities, your electrical panel and, on septic properties, what the system and the agencies will require. These items can affect cost, so we include them in your estimate.</p>
+      </details>
+      <details>
+        <summary>Are there city impact fees or school fees?</summary>
+        <p>City impact fees are waived for ADUs under 750 sq ft; larger ADUs pay a reduced, proportional amount. School fees don&rsquo;t apply to ADUs under 500 sq ft. Permit, plan check and utility connection fees still apply. We&rsquo;ll include expected fees in your estimate.</p>
+      </details>
+      <details>
+        <summary>Do you give free estimates?</summary>
+        <p>Yes. Call us at <a href="tel:+16615549217">(661) 554-9217</a> or use the <a href="#estimate">form at the top of this page</a>, tell us about your project, and we&rsquo;ll get back to you to set up a free estimate.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <h2>Ready to add an ADU to your property?</h2>
+    <p>Tell us what you have in mind and we&rsquo;ll get back to you with a free estimate.</p>
+    <div class="cta-actions">
+      <a class="btn" href="tel:+16615549217">Call (661) 554-9217</a>
+      <a class="btn btn-outline" href="#estimate">Request a Free Estimate</a>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img class="footer-logo" src="images/pr-mark-light.svg" alt="Petro Remodeling Inc logo" width="62" height="54">
+        <h4>Petro Remodeling Inc</h4>
+        <p>Building, remodeling, restoration and new construction across the Antelope Valley and Santa Clarita.</p>
+        <address>Lancaster, CA<br>Serving the Antelope Valley &amp; Santa Clarita</address>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+16615549217">(661) 554-9217</a></li>
+          <li><a href="mailto:petroremodels@gmail.com">petroremodels@gmail.com</a></li>
+          <li><a href="contact.html">Request a Free Estimate</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="yr">2026</span> Petro Remodeling Inc. All rights reserved. &middot; CSLB Lic. #1054586</span>
+      <span><a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms of Service</a></span>
+    </div>
+  </div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>
