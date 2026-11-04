@@ -63,6 +63,16 @@
 .gallery figcaption{padding:10px 14px;font-size:.92rem;color:var(--gray)}
 @media (max-width:900px){.gallery{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:560px){.gallery{grid-template-columns:1fr}}
+/* ADU quick-jump tabs (page-scoped) */
+.adu-tabs{position:sticky;top:var(--hdr-h,64px);z-index:40;background:#0d0f12;border-bottom:1px solid #23272d}
+.adu-tabs ul{list-style:none;margin:0 auto;padding:10px 16px;display:flex;gap:8px;justify-content:center;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;max-width:1200px}
+.adu-tabs ul::-webkit-scrollbar{display:none}
+.adu-tabs a{display:inline-block;white-space:nowrap;padding:8px 16px;border-radius:999px;border:1px solid #3a4048;background:#1b1e23;color:#eceef0;font-weight:600;font-size:.95rem;text-decoration:none;transition:background .15s,border-color .15s}
+.adu-tabs a:hover,.adu-tabs a:focus-visible{border-color:var(--orange);color:#fff;background:rgba(229,40,63,.14)}
+.adu-tabs a.tab-cta{background:var(--orange);border-color:var(--orange);color:#fff}
+.adu-tabs a.tab-cta:hover{background:var(--orange-d)}
+#main section[id],#estimate{scroll-margin-top:calc(var(--hdr-h,64px) + 70px)}
+@media (max-width:720px){.adu-tabs ul{justify-content:flex-start;padding:8px 12px;gap:6px}.adu-tabs a{padding:7px 13px;font-size:.9rem}}
 </style>
 <script type="application/ld+json">
 {
@@ -100,6 +110,16 @@
 <main id="main">
 
 <!-- Hero background is the same decorative image the home page uses (images/hero-home.jpg). It is NOT a Petro project photo and is not captioned as one. -->
+<nav class="adu-tabs" aria-label="Jump to section">
+  <ul>
+    <li><a href="#pricing">Prices</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#how-it-works">How It Works</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#estimate" class="tab-cta">Free Estimate</a></li>
+  </ul>
+</nav>
+
 <section class="hero adu-hero" style="--hero-img:url('images/hero-home.jpg')">
   <div class="container hero-grid">
     <div>
@@ -166,6 +186,7 @@
     </form>
   </div>
 </section>
+
 
 <section id="adu-types">
   <div class="container">
@@ -277,10 +298,10 @@
       <p>Typical Antelope Valley &amp; Santa Clarita market ranges, not a quote. Every lot is different. Get your free estimate for exact pricing.</p>
     </div>
     <div class="grid price-grid">
-      <div class="card"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10 12 4l9 6v10H3z"/><path d="M6 20v-7h12v7"/><path d="M6 16h12"/></svg></div><h3>Garage conversion</h3><p class="price">About $80k&ndash;$130k</p><p class="price-ex">Example: 400 sq ft</p><p>A basic conversion reusing the existing slab and walls often starts around $80k. Adding a kitchen, bathroom, sewer work and a new panel brings it to $120k+.</p></div>
-      <div class="card"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></div><h3>Detached ADU</h3><p class="price">About $190k&ndash;$280k</p><p class="price-ex">Example: 750 sq ft</p><p>Larger 900&ndash;1,200 sq ft units run up to about $350k.</p></div>
+      <div class="card"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10 12 4l9 6v10H3z"/><path d="M6 20v-7h12v7"/><path d="M6 16h12"/></svg></div><h3>Garage conversion</h3><p class="price">Range: $80k&ndash;$130k</p><p class="price-ex">Example: 400 sq ft</p><p>A basic conversion reusing the existing slab and walls often starts around $80k. Adding a kitchen, bathroom, sewer work and a new panel brings it to $120k+.</p></div>
+      <div class="card"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></div><h3>Detached ADU</h3><p class="price">Range: $190k&ndash;$280k</p><p class="price-ex">Example: 750 sq ft</p><p>Larger 900&ndash;1,200 sq ft units run up to about $350k.</p></div>
       <div class="card"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 20h20"/><path d="M4 20V9l8-6 8 6v11"/><path d="M12 20V9"/></svg></div><h3>Attached ADU / guest house</h3><p class="price">Similar to detached</p><p>Often a little less, thanks to the shared wall and easier utility tie-ins.</p></div>
-      <div class="card"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5"/><path d="M9 13h7M9 17h7"/></svg></div><h3>Plans, engineering &amp; permits</h3><p class="price">About $10k&ndash;$30k</p></div>
+      <div class="card"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5"/><path d="M9 13h7M9 17h7"/></svg></div><h3>Plans, engineering &amp; permits</h3><p class="price">Range: $10k&ndash;$30k</p></div>
     </div>
     <div class="note"><p>Utility work (such as an Edison service or panel upgrade, or sewer/water lines) varies by lot and can add cost. City impact fees are waived for ADUs under 750 sq ft, and school fees don&rsquo;t apply to ADUs under 500 sq ft.</p></div>
     <p class="reviews-more"><a class="btn" href="#estimate">Get Your Free Estimate</a></p>
@@ -417,5 +438,6 @@
   </div>
 </footer>
 <script src="main.js"></script>
+<script>(function(){var h=document.querySelector(".site-header");function f(){if(h)document.documentElement.style.setProperty("--hdr-h",h.offsetHeight+"px")}f();addEventListener("resize",f)})();</script>
 </body>
 </html>
